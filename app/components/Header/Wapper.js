@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  text-align: center;
+  width: 100%;
+  height: 81px;
+  background-color: #ffffff;
   display: flex;
+  flex-direction: row;
 `;
 
 export default Wrapper;

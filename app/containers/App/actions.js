@@ -57,3 +57,9 @@ export function repoLoadingError(error) {
     error,
   };
 }
+
+export function loadActivities() {
+  return {
+    type: 'Load Activities',
+  };
+}

@@ -18,6 +18,7 @@ export const initialState = {
   userData: {
     repositories: false,
   },
+  currentActivities: false,
 };
 
 /* eslint-disable default-case, no-param-reassign */
@@ -40,6 +41,9 @@ const appReducer = (state = initialState, action) =>
         draft.error = action.error;
         draft.loading = false;
         break;
+
+      case 'Load Activities':
+        draft.currentActivities = action.activities;
     }
   });
 

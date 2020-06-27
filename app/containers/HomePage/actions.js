@@ -30,3 +30,62 @@ export function changeUsername(username) {
     username,
   };
 }
+
+/**
+ * Changes the input field of the form
+ *
+ * @param  {string} currentActivities The new text of the input field
+ *
+ * @return {object} An action object with a type of CHANGE_USERNAME
+ */
+export function changeCurrentActivities(currentActivities) {
+  return {
+    type: 'Change Current Activities',
+    currentActivities,
+  };
+}
+
+/**
+ * Load the repositories, this action starts the request saga
+ *
+ * @return {object} An action object with a type of LOAD_REPOS
+ */
+export function loadActivities() {
+  return {
+    type: 'Load Activities',
+  };
+}
+
+export function changeOrigin(origin) {
+  return {
+    type: 'Change Origin',
+    origin,
+  };
+}
+
+export function changeDestination(destination) {
+  return {
+    type: 'Change Destination',
+    destination,
+  };
+}
+
+export function changeDepartDate(departDate) {
+  return {
+    type: 'Change Depart Date',
+    departDate,
+  };
+}
+
+export function changePassenger(passenger) {
+  return {
+    type: 'Change Passenger',
+    passenger,
+  };
+}
+
+export function onSearchTaxiBooking() {
+  return {
+    type: 'Search Taxi Booking',
+  };
+}

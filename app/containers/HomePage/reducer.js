@@ -13,6 +13,15 @@ import { CHANGE_USERNAME } from './constants';
 // The initial state of the App
 export const initialState = {
   username: '',
+  currentActivities: '',
+  origin: {
+    description: 'Enter pickup location',
+  },
+  destination: {
+    description: 'Enter drop destination',
+  },
+  departDate: null,
+  passenger: 1,
 };
 
 /* eslint-disable default-case, no-param-reassign */
@@ -22,6 +31,21 @@ const homeReducer = (state = initialState, action) =>
       case CHANGE_USERNAME:
         // Delete prefixed '@' from the github username
         draft.username = action.username.replace(/@/gi, '');
+        break;
+      case 'Change Current Activities':
+        draft.currentActivities = action.currentActivities;
+        break;
+      case 'Change Origin':
+        draft.origin = action.origin;
+        break;
+      case 'Change Destination':
+        draft.destination = action.destination;
+        break;
+      case 'Change Depart Date':
+        draft.departDate = action.departDate;
+        break;
+      case 'Change Passenger':
+        draft.passenger = action.passenger;
         break;
     }
   });

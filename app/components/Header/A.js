@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import NormalA from 'components/A';
 
 const A = styled(NormalA)`
-  padding: 2em 0;
+  margin-left: 57px;
+  margin-right: 23px;
 `;
 
 export default A;

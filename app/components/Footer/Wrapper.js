@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
+  height: 300px;
+  background-color: #01363d;
   display: flex;
-  justify-content: space-between;
-  padding: 3em 0;
-  border-top: 1px solid #666;
+  flex-direction: column;
+  color: white;
 `;
 
 export default Wrapper;

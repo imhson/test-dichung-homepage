@@ -1,28 +1,41 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+import LocaleToggle from 'containers/LocaleToggle';
 import A from './A';
-import Img from './Img';
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
+import LogoPic from './logo.png';
 import messages from './messages';
+import Wapper from './Wapper';
+
+import Logo from './Logo';
 
 function Header() {
   return (
-    <div>
+    <Wapper>
       <A href="https://www.reactboilerplate.com/">
-        <Img src={Banner} alt="react-boilerplate - Logo" />
+        <Logo src={LogoPic} alt="react-boilerplate - Logo" />
       </A>
       <NavBar>
-        <HeaderLink to="/">
-          <FormattedMessage {...messages.home} />
-        </HeaderLink>
-        <HeaderLink to="/features">
-          <FormattedMessage {...messages.features} />
-        </HeaderLink>
+        <section>
+          <HeaderLink to="/">
+            <FormattedMessage {...messages.promotions} />
+          </HeaderLink>
+          <HeaderLink to="/become-a-partner">
+            <FormattedMessage {...messages.beapartner} />
+          </HeaderLink>
+        </section>
+        <section>
+          <Wapper>
+            <HeaderLink to="/">
+              <FormattedMessage {...messages.account} />
+            </HeaderLink>
+            <LocaleToggle />
+          </Wapper>
+        </section>
       </NavBar>
-    </div>
+    </Wapper>
   );
 }
 

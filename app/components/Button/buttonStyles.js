@@ -1,24 +1,24 @@
 import { css } from 'styled-components';
 
 const buttonStyles = css`
-  display: inline-block;
+  display: block;
+  height: 100px;
   box-sizing: border-box;
-  padding: 0.25em 2em;
+  padding: 2em 73px;
   text-decoration: none;
-  border-radius: 4px;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
   user-select: none;
   cursor: pointer;
   outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  border: 2px solid #41addd;
-  color: #41addd;
+  font-size: 17px;
+  background: #77a300;
+  min-width: 212px;
 
   &:active {
-    background: #41addd;
+    background: #749f00;
     color: #fff;
   }
 `;
