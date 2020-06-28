@@ -22,8 +22,8 @@ import {
   onSearchTaxiBooking,
 } from './actions';
 import Button from './Button';
-import Img from './location.png';
-import NormalIcon from './Icon';
+import ImgLocation from './location.png';
+import Icon from './Icon';
 import {
   makeSelectOrigin,
   makeSelectDestination,
@@ -61,7 +61,7 @@ function TaxiBookingForm({
     <Wrapper>
       <Col xl>
         <LargeSection>
-          <Icon src={Img} alt="icon-alt" />
+          <Icon src={ImgLocation} alt="icon-alt" />
           <Main style={{ flex: 1 }} onClick={() => setOriginModalShow(true)}>
             <Title>Origin</Title>
             <Content>{origin.description}</Content>
@@ -88,7 +88,7 @@ function TaxiBookingForm({
         </LargeSection>
       </Col>
       <SmallSection>
-        <Icon src={Img} alt="icon-alt" />
+        <Icon src={ImgLocation} alt="icon-alt" />
         <Main onClick={() => setModalShow(true)}>
           <Title>Depart date</Title>
           <Content>{departDate ? formatDate(departDate) : 'dd/mm/yy'}</Content>
@@ -101,7 +101,7 @@ function TaxiBookingForm({
         />
       </SmallSection>
       <SmallSection>
-        <Icon src={Img} alt="icon_alt" />
+        <Icon src={ImgLocation} alt="icon_alt" />
         <Main onClick={() => setPassengersModalShow(true)}>
           <Title>Passengers/Car</Title>
           <Content>{passenger} passenger(s)</Content>
@@ -318,11 +318,6 @@ const Wrapper = styled(Row)`
   margin: 0px;
 `;
 
-const Icon = styled(NormalIcon)`
-  width: 30px;
-  padding: 35px 0px;
-  margin: 0px 10px;
-`;
 const LargeSection = styled.div`
   display: flex;
   flex-direction: row;
